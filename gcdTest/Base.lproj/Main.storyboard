@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rvs-J6-8ld">
+                                <rect key="frame" x="277" y="136" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="startLongOperationMethod" destination="BYZ-38-t0r" eventType="touchUpInside" id="jng-z0-EU5"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="g3F-5O-848">
+                                <rect key="frame" x="239" y="28" width="123" height="29"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                            </segmentedControl>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="AI9-FZ-SOj">
+                                <rect key="frame" x="0.0" y="297" width="600" height="162"/>
+                                <date key="date" timeIntervalSinceReferenceDate="454434825.360116">
+                                    <!--2015-05-27 15:53:45 +0000-->
+                                </date>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3QX-hW-CHQ">
+                                <rect key="frame" x="72" y="191" width="457" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="g3F-5O-848" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="4TE-vG-bVW"/>
+                            <constraint firstAttribute="trailing" secondItem="AI9-FZ-SOj" secondAttribute="trailing" id="8Uz-sd-0aq"/>
+                            <constraint firstItem="AI9-FZ-SOj" firstAttribute="top" secondItem="3QX-hW-CHQ" secondAttribute="bottom" constant="85" id="IRg-JT-4av"/>
+                            <constraint firstItem="3QX-hW-CHQ" firstAttribute="top" secondItem="Rvs-J6-8ld" secondAttribute="bottom" constant="25" id="PHy-t1-xbk"/>
+                            <constraint firstItem="Rvs-J6-8ld" firstAttribute="top" secondItem="g3F-5O-848" secondAttribute="bottom" constant="80" id="Qrw-nD-E4u"/>
+                            <constraint firstItem="3QX-hW-CHQ" firstAttribute="centerX" secondItem="AI9-FZ-SOj" secondAttribute="centerX" id="UJV-oD-HrZ"/>
+                            <constraint firstItem="Rvs-J6-8ld" firstAttribute="centerX" secondItem="3QX-hW-CHQ" secondAttribute="centerX" id="dVV-ME-TVx"/>
+                            <constraint firstItem="3QX-hW-CHQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="56" id="gus-cg-n1r"/>
+                            <constraint firstItem="AI9-FZ-SOj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="jk6-Qg-Foq"/>
+                            <constraint firstItem="g3F-5O-848" firstAttribute="centerX" secondItem="Rvs-J6-8ld" secondAttribute="centerX" id="oFR-86-K29"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="datePicker" destination="AI9-FZ-SOj" id="bA8-5T-t5Q"/>
+                        <outlet property="outLabel" destination="3QX-hW-CHQ" id="15y-gM-lDK"/>
+                        <outlet property="segmentedControl" destination="g3F-5O-848" id="KNx-sw-g1n"/>
+                        <outlet property="startLongOperation" destination="Rvs-J6-8ld" id="CEr-li-eLd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
